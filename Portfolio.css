@@ -1,0 +1,632 @@
+@import "https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap";
+@import "https://fonts.googleapis.com/css?family=Raleway:700&display=swap";
+
+/* Custom properties/variables  */
+:root {
+  --main-grey: #abb2bf;
+  --main-dark: #220b28;
+  --main-white: #FFFFFF;
+  --main-gold: #D4AF37;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* Base styles */
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-white);
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* nav */
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+  text-align: right;
+}
+
+.section-nav {
+  display: inline;
+  text-align: right;
+  margin-right: 3rem;
+  position: relative;
+  top: -5rem;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav li {
+  margin: 2rem 0;
+}
+
+.section-nav li {
+  display: inline;
+  text-align: right;
+}
+
+.nav-list a {
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  color: var(--main-grey);
+  text-decoration: underline;
+}
+
+.contact-methods {
+  text-align: right;
+  width: 100%;
+}
+
+/* Welcome section */
+
+.welcome-container {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 5px var(--main-gold);
+}
+
+.welcome-top {
+  display: flex;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 50vh;
+  padding: 3rem 0 0 12rem;
+  margin-top: 8rem;
+}
+
+.intro h1[class="logo"] {
+  text-align: left;
+}
+.intro p {
+  text-align: center;
+}
+
+.logo {
+  color: var(--main-white);
+  text-align: left;
+}
+
+.logo code {
+  color: #d19a66;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("R.jpg");
+  
+}
+
+.welcome-section > h1 {
+  text-align: left;
+}
+
+.welcome-section > p {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.welcome-bottom {
+  display: flex;
+  margin-top: 12rem;
+}
+
+.next-arrow {
+  width: 100%;
+  text-align: right;
+  padding-top: 8rem;
+}
+
+.section-header {
+  max-width: 640px;
+  margin-top: 10rem;
+}
+
+/* About section */
+.about-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4rem;
+}
+
+.about-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.about-more p {
+  width: 50%;
+  text-align: justify;
+  margin: 1rem 0;
+}
+
+#profile-link {
+  color: var(--main-gold);
+}
+
+#profile-link:hover {
+  color: var(--main-grey);
+  cursor: pointer;
+}
+
+/* Projects section */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+.section-background {
+  background-image: url(https://img1.picmix.com/output/stamp/normal/6/9/7/7/1157796_36cea.gif);
+  border-radius: 6px;
+  width: 80%;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 5px var(--main-gold);
+}
+
+.section-container h2[class=logo] {
+  margin: 1rem 0 0 4rem;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+}
+
+.code {
+  color: var(--main-gray);
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: #ff7f50;
+}
+
+.section-logo {
+  color: var(--main-grey);
+  text-align: left;
+  margin: 1rem 0 0 4rem;
+}
+
+.section-logo code {
+  color: #d19a66;
+}
+
+.project-item {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  margin-bottom: 5rem;
+  padding: 2rem 0;
+}
+
+.project-image, .about-image, .contact-image {
+  object-fit: cover;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+  width: 80%;
+  border-radius: 6px;
+}
+
+.about-image, .contact-image {
+  width: 40%;
+}
+
+.project-title {
+  font-size: 4rem;
+  padding: 2rem 0.5rem;
+}
+
+.project-desc {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-desc p, .project-desc a {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+/* Contact section */
+.contact-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section-header > h2 {
+  font-size: 6rem;
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 4rem;
+  }
+}
+
+.contact-section-header > p {
+  font-style: italic;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-detail {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-input {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
+  width: 90%;
+  height: 32px;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--main-white);
+  transition: 0.3s ease-out;
+}
+
+.contact-input:hover {
+  box-shadow: 2px 2px 4px rgb(212,175,55), -2px -2px 4px rgb(212,175,55);
+}
+
+textarea {
+  padding-top: 1rem;
+  max-width: 90%;
+  min-height: 200px;
+  resize: vertical;
+}
+
+form .btn {
+  width: 40%;
+  height: 48px;
+  background-color: rgb(212,175,55);
+  transition: 0.3s ease-out;
+  padding: 0;
+}
+
+form .btn:hover {
+  background-color: var(--main-white);
+  color: var(--main-dark);
+  cursor: pointer;
+}
+
+.contact-title, .about-title {
+  text-align: left;
+  position: relative;
+  left: -12rem;
+}
+
+.about-title {
+  font-size: 3rem;
+}
+
+.contact-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  text-align: left;
+  padding-left: 4rem;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: 0.3s ease-out;
+}
+
+.contact-details:hover {
+  text-shadow: 2px 2px 5px var(--main-gold);
+}
+
+.btn.contact-details {
+  color: var(--main-grey);
+}
+
+/* Footer */
+
+footer {
+  font-weight: 400;
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--main-grey);
+}
+
+footer > p {
+  margin: 2rem;
+}
+
+footer i {
+  vertical-align: middle;
+}
+
+/*  few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+*/
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+
+  .project-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-image {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .contact-detail img {
+    display: none;
+  }
+
+  .about-desc {
+    padding-left: 0rem;
+  }
+
+  .contact-desc {
+    width: 80%;
+  }
+
+  .about-title {
+    left: 0rem;
+  }
+
+  .contact-title {
+    display: none;
+  }
+}
+
+/* 760px / 16px = 47.5em */
+@media (max-width: 48em) {
+  .section-nav {
+    top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-nav-list a {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+  }
+
+  .contact-desc {
+    align-items: center;
+    width: 100%;
+  }
+
+  .next-arrow {
+    display: none;
+  }
+
+  .intro h1[class="logo"] {
+    display: none;
+  }
+
+  .contact-methods {
+    text-align: right;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+
+  .section-nav {
+    top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .intro {
+    padding: 3rem 0 0 6rem;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* 2400px / 16px = 150em */
+@media (min-width: 150em) {
+    html {
+      font-size: 200%;
+    }
+
+    .contact-input {
+      height: 100px;
+    }
+
+    .section-background {
+      background-size: cover;
+    }
+
+    .project-item {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project.project-tile {
+      width: 50%;
+    }
+    
+    form .btn {
+      width: 50%;
+      height: 160px;
+      padding: 0;
+      text-align: center;
+    }
+}
